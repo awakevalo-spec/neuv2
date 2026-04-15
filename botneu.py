@@ -5,7 +5,8 @@ from discord.ext import tasks
 TOKEN = os.getenv("TOKEN")
 CHANNEL_ID = 1489930989890175040
 
-client = discord.Client()
+intents = discord.Intents.default()
+client = discord.Client(intents=intents)
 
 @client.event
 async def on_ready():
